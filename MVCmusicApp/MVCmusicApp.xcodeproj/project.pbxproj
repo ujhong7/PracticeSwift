@@ -13,6 +13,9 @@
 		1D11FC812A73650900D3F383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D11FC7F2A73650900D3F383 /* Main.storyboard */; };
 		1D11FC832A73650B00D3F383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D11FC822A73650B00D3F383 /* Assets.xcassets */; };
 		1D11FC862A73650B00D3F383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D11FC842A73650B00D3F383 /* LaunchScreen.storyboard */; };
+		1D11FCB22A73C62B00D3F383 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D11FCB12A73C62B00D3F383 /* APIService.swift */; };
+		1D11FCB42A73C6B100D3F383 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D11FCB32A73C6B100D3F383 /* Music.swift */; };
+		1D11FCB62A73C6CA00D3F383 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D11FCB52A73C6CA00D3F383 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1D11FC822A73650B00D3F383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D11FC852A73650B00D3F383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D11FC872A73650B00D3F383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D11FCB12A73C62B00D3F383 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1D11FCB32A73C6B100D3F383 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		1D11FCB52A73C6CA00D3F383 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,48 @@
 			children = (
 				1D11FC792A73650900D3F383 /* AppDelegate.swift */,
 				1D11FC7B2A73650900D3F383 /* SceneDelegate.swift */,
-				1D11FC7D2A73650900D3F383 /* ViewController.swift */,
-				1D11FC7F2A73650900D3F383 /* Main.storyboard */,
+				1D11FCB02A73C59500D3F383 /* APIService */,
+				1D11FCAF2A73C58900D3F383 /* Models */,
+				1D11FCAE2A73C58100D3F383 /* Views */,
+				1D11FCAD2A73C57400D3F383 /* Controllers */,
 				1D11FC822A73650B00D3F383 /* Assets.xcassets */,
 				1D11FC842A73650B00D3F383 /* LaunchScreen.storyboard */,
 				1D11FC872A73650B00D3F383 /* Info.plist */,
 			);
 			path = MVCmusicApp;
+			sourceTree = "<group>";
+		};
+		1D11FCAD2A73C57400D3F383 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D11FC7D2A73650900D3F383 /* ViewController.swift */,
+				1D11FCB52A73C6CA00D3F383 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D11FCAE2A73C58100D3F383 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D11FC7F2A73650900D3F383 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D11FCAF2A73C58900D3F383 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D11FCB32A73C6B100D3F383 /* Music.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D11FCB02A73C59500D3F383 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				1D11FCB12A73C62B00D3F383 /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +181,9 @@
 			files = (
 				1D11FC7E2A73650900D3F383 /* ViewController.swift in Sources */,
 				1D11FC7A2A73650900D3F383 /* AppDelegate.swift in Sources */,
+				1D11FCB42A73C6B100D3F383 /* Music.swift in Sources */,
+				1D11FCB62A73C6CA00D3F383 /* DetailViewController.swift in Sources */,
+				1D11FCB22A73C62B00D3F383 /* APIService.swift in Sources */,
 				1D11FC7C2A73650900D3F383 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

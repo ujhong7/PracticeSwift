@@ -17,22 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5yf-1f-cdI">
-                                <rect key="frame" x="30" y="326.66666666666669" width="333" height="119"/>
+                                <rect key="frame" x="30" y="324.66666666666669" width="333" height="123"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앨범 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v31-be-GDN">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="26.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="27.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노래 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7I-tb-biy">
-                                        <rect key="frame" x="0.0" y="46.333333333333314" width="333" height="26.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="47.666666666666629" width="333" height="27.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아티스트 이름" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbE-Jw-Crs">
-                                        <rect key="frame" x="0.0" y="92.666666666666629" width="333" height="26.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="95.333333333333314" width="333" height="27.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -52,6 +52,9 @@
                                         <color key="tintColor" red="0.92572820069999995" green="0.99942404029999998" blue="0.85250293560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYd-iR-1Sc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSH-jn-2Tu">
                                         <rect key="frame" x="179.66666666666663" y="0.0" width="153.33333333333337" height="50"/>
@@ -60,6 +63,9 @@
                                         <color key="tintColor" red="0.92572820069999995" green="0.99942404029999998" blue="0.85250293560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJJ-v8-Qkd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,15 +82,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5yf-1f-cdI" secondAttribute="trailing" constant="30" id="nXp-og-ntP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumNameLabel" destination="v31-be-GDN" id="tgC-5S-i8x"/>
+                        <outlet property="artistNameLabel" destination="sbE-Jw-Crs" id="zzK-JH-WKW"/>
+                        <outlet property="songNameLabel" destination="M7I-tb-biy" id="Hcw-Wi-QXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-37" y="5"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="sah-Fs-NDh">
             <objects>
-                <viewController id="bwr-f8-3am" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="bwr-f8-3am" customClass="DetailViewController" customModule="MVCmusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IRu-2d-DAj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,6 +110,9 @@
                                 <color key="tintColor" red="0.92572820069999995" green="0.99942404029999998" blue="0.85250293560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="bwr-f8-3am" eventType="touchUpInside" id="Zsq-w8-BYy"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lMP-ce-Nlj">
                                 <rect key="frame" x="30" y="142.33333333333334" width="333" height="367.33333333333326"/>
@@ -130,6 +144,10 @@
                             <constraint firstItem="lMP-ce-Nlj" firstAttribute="leading" secondItem="2yF-KC-iWO" secondAttribute="leading" constant="30" id="yhT-m2-fMV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="LtS-zC-pNU" id="4gL-mL-2ck"/>
+                        <outlet property="songNameLabel" destination="55i-d0-2tF" id="xfM-5b-BBF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztW-8I-9aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
