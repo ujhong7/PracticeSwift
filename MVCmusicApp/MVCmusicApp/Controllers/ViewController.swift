@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     let apiManager = APIService()
     
+    // 데이터(모델) (일반적으로 뷰컨트롤러가 가지고 있다) ⭐️⭐️⭐️
     var music: Music? {
         didSet {
             DispatchQueue.main.async {
@@ -59,11 +60,14 @@ class ViewController: UIViewController {
         
         guard let music = self.music else { return }
         
+        // 스토리보드 인스턴스 생성
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as! DetailViewController
         detailVC.modalPresentationStyle = .fullScreen
         
+        // 네트워킹 매니저 전달 (힙 주소 복사해서 전달)
         detailVC.apiManager = self.apiManager
         
+        // 다음화면에서 필요한 데이터 전달 ⭐️
         detailVC.songName = music.songName
         detailVC.imageURL = music.imageUrl
         
